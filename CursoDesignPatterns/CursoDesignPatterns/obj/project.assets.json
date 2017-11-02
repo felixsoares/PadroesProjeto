@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felix\\Documents\\Visual Studio 2017\\Projects\\CursoDesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns.csproj",
+      "projectUniqueName": "C:\\Users\\Felix\\Documents\\Visual Studio 2017\\Projects\\PadroesProjeto\\CursoDesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns.csproj",
       "projectName": "CursoDesignPatterns",
-      "projectPath": "C:\\Users\\Felix\\Documents\\Visual Studio 2017\\Projects\\CursoDesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns.csproj",
+      "projectPath": "C:\\Users\\Felix\\Documents\\Visual Studio 2017\\Projects\\PadroesProjeto\\CursoDesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns.csproj",
       "packagesPath": "C:\\Users\\Felix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felix\\Documents\\Visual Studio 2017\\Projects\\CursoDesignPatterns\\CursoDesignPatterns\\obj\\",
+      "outputPath": "C:\\Users\\Felix\\Documents\\Visual Studio 2017\\Projects\\PadroesProjeto\\CursoDesignPatterns\\CursoDesignPatterns\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
