@@ -15,7 +15,32 @@ namespace CursoDesignPatterns
             orcamento.AdicionaItem(new Item("Cinto", 20.0));
             orcamento.AdicionaItem(new Item("Outros", 200.0));
 
-            Console.WriteLine("Valor do Orçamento: " + orcamento.Valor);
+            Console.WriteLine("Valor inicial do Orçamento: " + orcamento.Valor);
+
+            // STATE
+            orcamento.AplicaDescontoExtra();
+            Console.WriteLine("Valor do Orçamento (desconto extra): " + orcamento.Valor);
+
+            // STATE
+            orcamento.Aprova();
+
+            // STATE
+            orcamento.AplicaDescontoExtra();
+            Console.WriteLine("Valor do Orçamento (desconto extra): " + orcamento.Valor);
+
+            // STATE
+            orcamento.Finaliza();
+
+            try
+            {
+                // STATE
+                orcamento.AplicaDescontoExtra();
+                Console.WriteLine("Valor do Orçamento (desconto extra): " + orcamento.Valor);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             // STRATEGY
             Imposto iss = new ISS("ISS");
@@ -35,6 +60,7 @@ namespace CursoDesignPatterns
             calculadoraDeImpostos.RealizaCalculo(orcamento, ikcv);
             calculadoraDeImpostos.RealizaCalculo(orcamento, iqcc);
 
+            // CHAIN OF RESPONSIBILITY
             CalculadoraDeDescontos calculadoraDeDescontos = new CalculadoraDeDescontos();
             calculadoraDeDescontos.RealizaCalculo(orcamento);
 
