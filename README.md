@@ -7,3 +7,5 @@
 3) Template Method
 
 4) Decorator
+
+5) State
