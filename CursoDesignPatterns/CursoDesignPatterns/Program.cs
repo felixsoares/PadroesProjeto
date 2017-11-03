@@ -1,5 +1,6 @@
 ﻿using CursoDesignPatterns.Contollers;
 using CursoDesignPatterns.Modelos.Desconto;
+using CursoDesignPatterns.Modelos.Impostos;
 using System;
 
 namespace CursoDesignPatterns
@@ -16,14 +17,23 @@ namespace CursoDesignPatterns
 
             Console.WriteLine("Valor do Orçamento: " + orcamento.Valor);
 
+            // STRATEGY
             Imposto iss = new ISS("ISS");
             Imposto icms = new ICMS("ICMS");
-            Imposto icc = new ICCC("ICCC");
+
+            // DECORATOR
+            Imposto ippt = new IPPT("IPPT", new ICCC("ICCC"));
+
+            // TEMPLATE METHOD
+            Imposto ikcv = new IKCV("IKCV");
+            Imposto iqcc = new IQCC("IQCC");
 
             CalculadoraDeImpostos calculadoraDeImpostos = new CalculadoraDeImpostos();
             calculadoraDeImpostos.RealizaCalculo(orcamento, iss);
             calculadoraDeImpostos.RealizaCalculo(orcamento, icms);
-            calculadoraDeImpostos.RealizaCalculo(orcamento, icc);
+            calculadoraDeImpostos.RealizaCalculo(orcamento, ippt);
+            calculadoraDeImpostos.RealizaCalculo(orcamento, ikcv);
+            calculadoraDeImpostos.RealizaCalculo(orcamento, iqcc);
 
             CalculadoraDeDescontos calculadoraDeDescontos = new CalculadoraDeDescontos();
             calculadoraDeDescontos.RealizaCalculo(orcamento);

@@ -6,16 +6,19 @@ namespace CursoDesignPatterns
 {
     public class ICMS : Imposto
     {
-        public string Nome { get; set; }
-
-        public double Calcula(Orcamento orcamento)
+        public override double Calcula(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.05;
+            return orcamento.Valor * 0.05 + CalculaOutroImposto(orcamento);
         }
 
-        public ICMS(string nome)
+        public ICMS(string nome) : base (nome)
         {
-            this.Nome = nome;
+
+        }
+
+        public ICMS(string nome, Imposto imposto) : base(nome, imposto)
+        {
+
         }
     }
 }

@@ -6,9 +6,7 @@ namespace CursoDesignPatterns
 {
     class ICCC : Imposto
     {
-        public string Nome { get; set; }
-
-        public double Calcula(Orcamento orcamento)
+        public override double Calcula(Orcamento orcamento)
         {
             double valor = 0.0;
 
@@ -25,12 +23,17 @@ namespace CursoDesignPatterns
                 valor = (orcamento.Valor * 0.08) + 30.0;
             }
 
-            return valor;
+            return valor + CalculaOutroImposto(orcamento);
         }
 
-        public ICCC(string nome)
+        public ICCC(string nome) : base(nome)
         {
-            this.Nome = nome;
+
+        }
+
+        public ICCC(string nome, Imposto imposto) : base(nome, imposto)
+        {
+
         }
     }
 }
